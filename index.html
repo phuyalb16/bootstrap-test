@@ -26,22 +26,27 @@
         <li class = "nav-item active"> <a class="nav-link" href="#"> <span class="fa fa-home fa-lg"></span> Home </a></li>
         <li class = "nav-item"> <a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span> About </a></li>
         <li class = "nav-item"> <a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu </a></li>
-        <li class = "nav-item"> <a class="nav-link" href="./comtactus.html"><span class="fa fa-address-card fa-lg"></span> Contact </a></li>
+        <li class = "nav-item"> <a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact </a></li>
       </ul>
     </div>
     </div>
   </nav>
     <header class="jumbotron">
         <div class ="container">
-            <div class="row row-header">
-                <div class = "col-12 col-sm-6" >
+            <div class="row">
+                <div class = " col-sm-6 col-12" >
                     <h1>Ristorante con Fusion</h1>
-                    <div class="d-none d-sm-block">
+                    <div class="">
                       <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
                     </div>
                 </div>
                 <div class="col-12 col-sm align-self-center">
-                  <img src="img/logo.png" class="img-fluid" /></img>
+                  <img src="img/logo.png" class="img-fluid"></img>
+                </div>
+                <div class="col-12 col-sm-3 align-self-center">
+                  <a href="#reserveform">
+                  <button type="button" name="button"  class="btn btn-block btn-warning">Reserve Table</button>
+                </a>
                 </div>
             </div>
         </div>
@@ -64,15 +69,20 @@
         </div>
 
 
-        <div class ="row row-content">
-            <div class="col-12 col-sm4 col-md-3 align-items-center">
+        <div class ="row row-content align-items-center">
+            <div class="col-12 col-sm4 col-md-3 ">
                 <h3>This Month's Promotions</h3>
             </div>
-            <div class = "col col-sm col-md">
-                <h2>Weekend Grand Buffet</h2>
+            <div class = "col col-sm order-sm-last col-md">
+              <div class="media">
+                <div class="media-body">
+                <h2 >Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
                 <div class="d-none d-sm-block">
                   <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
                 </div>
+              </div>
+              <img class="d-flex img-thumbnail align-self-center"src="img/buffet.png"/>
+              </div>
             </div>
         </div>
 
@@ -93,6 +103,106 @@
               </div>
           </div>
         </div>
+
+        <div class="row row-content align-items-center ">
+          <div class="col-sm-2">
+          </div>
+          <div class="card col-sm-8  col-xs-12 " style="padding-left:0px; padding-right:0px;">
+            <div class="card-header bg-warning text-white">
+              <h3 > Reserve a Table</h3>
+            </div>
+
+          <div class="card-body col-sm-8 col-xs-12 ">
+            <form id ="reserveform" class="" action="index.html" method="post">
+              <div  class="form-group row">
+                <div class="col-sm-3">
+                  <div class="form-check">
+                    <label class="form-check-label" for="approve">
+                      Number of Guests
+                    </label>
+                  </div>
+                </div>
+                <div class="col-sm-1">
+                  <div class="form-check">
+                    <label class=" radio-inline form-check-label" for="approve">
+                      <input type="radio" class="form-check-input" name="approve" id="approve" value="">1</p>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-sm-1">
+                  <div class="form-check">
+                    <input type="radio" class="form-check-input" name="approve" id="approve" value="">
+                    <label class="radio-inline form-check-label" for="approve">
+                      <p>2</p>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-sm-1">
+                  <div class="form-check">
+                    <input type="radio" class="form-check-input" name="approve" id="approve" value="">
+                    <label class="form-check-label" for="approve">
+                      <p>3</p>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-md-1">
+                  <div class="form-check">
+                    <input type="radio" class="form-check-input" name="approve" id="approve" value="">
+                    <label class="form-check-label" for="approve">
+                      <p>4</p>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-md-1">
+                  <div class="form-check">
+                    <input type="radio" class="form-check-input" name="approve" id="approve" value="">
+                    <label class="form-check-label" for="approve">
+                      <p>5</p>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-md-1">
+                  <div class="form-check">
+                    <input type="radio" class="form-check-input" name="approve" id="approve" value="">
+                    <label class="form-check-label" for="approve">
+                      <p>6</p>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-sm-3 col-xs-12">
+                  <div class="form-check">
+                    <label class="form-check-label" for="approve">
+                      Date and Time
+                    </label>
+                  </div>
+                </div>
+                <div class="col-5 col-md-4 col-xs-12">
+                  <input type="tel" class="form-control" id="areacode" name="areacode" placeholder="Date">
+                </div>
+                <div class="col-7 col-md-4 col-xs-12">
+                  <input type="tel" class="form-control" id="telnum" name="telnum" placeholder="Time">
+                </div>
+                </div>
+
+                <div class="form-group row">
+                <div class  = "col-sm-4 offset-3">
+                  <button class="btn btn-primary">Reserve</button>
+                </div>
+                </div>
+
+              </div>
+            </form>
+          </div>
+          </div>
+          <!-- <div class="col-sm-2">
+          </div> -->
+
+        </div>
+
+      </div>
 
     <footer class="footer">
         <div class="container">
