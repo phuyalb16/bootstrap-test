@@ -71,6 +71,117 @@
         </div>
       </div>
     </div>
+
+    <div id="reserveModal" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-lg" role="content">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Reserve a Table</h4>
+            <button type="button" class="close" data-dismiss="modal" name="button">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="card-body col-sm-8 col-xs-12 ">
+              <form id ="reserveform" class="" action="index.html" method="post">
+                <div  class="form-group row">
+                  <div class="col-sm-3">
+                      <label class="form-check-label" for="approve">
+                        Number of Guests
+                      </label>
+                  </div>
+                  <div class="col-sm-1">
+                    <div class="form-check">
+                      <label class=" radio-inline form-check-label" for="approve">
+                        <input type="radio" class="form-check-input" name="approve" id="approve" value="">1</p>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-sm-1">
+                    <div class="form-check">
+                      <input type="radio" class="form-check-input" name="approve" id="approve" value="">
+                      <label class="radio-inline form-check-label" for="approve">
+                        <p>2</p>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-sm-1">
+                    <div class="form-check">
+                      <input type="radio" class="form-check-input" name="approve" id="approve" value="">
+                      <label class="form-check-label" for="approve">
+                        <p>3</p>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-1">
+                    <div class="form-check">
+                      <input type="radio" class="form-check-input" name="approve" id="approve" value="">
+                      <label class="form-check-label" for="approve">
+                        <p>4</p>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-1">
+                    <div class="form-check">
+                      <input type="radio" class="form-check-input" name="approve" id="approve" value="">
+                      <label class="form-check-label" for="approve">
+                        <p>5</p>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-1">
+                    <div class="form-check">
+                      <input type="radio" class="form-check-input" name="approve" id="approve" value="">
+                      <label class="form-check-label" for="approve">
+                        <p>6</p>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-sm-3 col-xs-12">
+                      <label class="form-check-label" for="approve">
+                        Section
+                      </label>
+                  </div>
+                  <div class="col-sm-auto col-xs-12">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                      <label class="btn btn-success active" >
+                        <input type="radio" name="options" checked> Non-Smoking
+                      </label>
+                      <label class="btn btn-danger">
+                        <input type="radio" nam="options"> Smoking
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-sm-3 col-xs-12">
+                      <label class="form-check-label" for="approve">
+                        Date and Time
+                      </label>
+                  </div>
+                  <div class="col-5 col-md-4 col-xs-12">
+                    <input type="date" class="form-control" id="areacode" name="areacode" placeholder="Date">
+                  </div>
+                  <div class="col-7 col-md-4 col-xs-12">
+                    <input type="time" class="form-control" id="telnum" name="telnum" placeholder="Time">
+                  </div>
+                  </div>
+
+                  <div class="form-group row">
+                  <div class  = "col-sm-8 offset-3">
+                    <button class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button class="btn btn-primary">Reserve</button>
+                  </div>
+                  </div>
+
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <header class="jumbotron">
         <div class ="container">
             <div class="row">
@@ -84,9 +195,7 @@
                   <img src="img/logo.png" class="img-fluid"></img>
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                  <a href="#reserveform">
-                  <button type="button" name="button"  class="btn btn-block btn-warning" data-toggle="tooltip" data-html="true" title="Or Call us at <br> <strong>+852 12345678</strong>" data-placement="bottom">Reserve Table</button>
-                </a>
+                  <button type="button" name="button"  class="btn btn-block btn-warning" data-toggle="modal" data-target="#reserveModal">Reserve Table</button>
                 </div>
             </div>
         </div>
@@ -134,6 +243,15 @@
               <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
                 <span class="carousel-control-next-icon"></span>
               </a>
+              <div class="btn-group" id="carouselButton">
+                  <button type="button" class="btn btn-danger btn-sm" id="carousel-pause">
+                    <span class="fa fa-pause"></span>
+                  </button>
+                  <button type="button" class="btn btn-danger btn-sm" id="carousel-play">
+                    <span class="fa fa-play"></span>
+                  </button>
+              </div>
+
             </div>
           </div>
         </div>
@@ -189,7 +307,7 @@
           </div>
         </div>
 
-        <div class="row row-content align-items-center ">
+        <!-- <div class="row row-content align-items-center ">
           <div class="col-sm-2">
           </div>
           <div class="card col-sm-8  col-xs-12 " style="padding-left:0px; padding-right:0px;">
@@ -281,8 +399,6 @@
               </div>
             </form>
           </div>
-          </div>
-          <!-- <div class="col-sm-2">
           </div> -->
 
         </div>
@@ -335,9 +451,15 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script>
-      $(document).ready(function(){
-        $('[data-toggle="tooltip"]').tooltip();
-      });
+        $(document).ready(function(){
+            $("#mycarousel").carousel( { interval: 2000 } );
+            $("#carousel-pause").click(function(){
+                $("#mycarousel").carousel('pause');
+            });
+            $("#carousel-play").click(function(){
+                $("#mycarousel").carousel('cycle');
+            });
+        });
     </script>
 </body>
 
